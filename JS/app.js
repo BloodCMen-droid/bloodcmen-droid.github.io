@@ -22,6 +22,7 @@ const productos = [
         unidad: "piezas",
         imagen: "IMG/Card_Familia_estampado/Card_Pol_Familia_estamapado_01.webp",
         idSeccion: "Seccion-Familia"
+        
     },
     {
         nombre: "Pijamas Personalizadas",
