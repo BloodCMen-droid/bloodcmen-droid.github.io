@@ -1,46 +1,46 @@
 const productos = [
-    {
-        nombre: "Poleras Personalizadas",
-        cantidad: 2,
-        precio:  "165  aprox",
-        unidad: "piezas",
-        imagen: "IMG/CardIndex/Card_01.png",
-        idSeccion: "seccion-estampados"
-    },
-    {
-        nombre: "Polos Personalizados",
-        cantidad: 1,
-        precio:  "30  aprox",
-        unidad: "pieza",
-        imagen: "IMG/CardIndex/Card_02.png",
-        idSeccion: "seccion-estampados"
-    },
-    {
-        nombre: "Poleras Personalizadas Familia",
-        cantidad: 3,
-        precio: "215  aprox",
-        unidad: "piezas",
-        imagen: "IMG/Card_Familia_Estampado/Card_Pol_Familia_estamapado_01.webp",
-        idSeccion: "Seccion-Familia"
-        
-    },
-    {
-        nombre: "Pijamas Personalizadas",
-        cantidad: 4,
-        precio:  "125  aprox",
-        unidad: "piezas",
-        imagen: "IMG/CardIndex/Card_03.png",
-        idSeccion: "seccion-estampados"
-    },
-    {
-        nombre: "Conjuntos Personalizados",
-        cantidad: 4,
-        precio:  "330 aprox",
-        unidad: "piezas",
-        imagen: "IMG/Card_Idex/Card_04.png",
-        idSeccion: "seccion-conjuntos"
-    }
+  {
+    nombre: "Poleras Personalizadas",
+    cantidad: 2,
+    precio: "165 aprox",
+    unidad: "piezas",
+    imagen: "/IMG/Card_Index/Card_01.png",
+    idSeccion: "seccion-estampados"
+  },
+  {
+    nombre: "Polos Personalizados",
+    cantidad: 1,
+    precio: "30 aprox",
+    unidad: "pieza",
+    imagen: "/IMG/Card_Index/Card_02.png",
+    idSeccion: "seccion-estampados"
+  },
+  {
+    nombre: "Poleras Personalizadas Familia",
+    cantidad: 3,
+    precio: "215 aprox",
+    unidad: "piezas",
+    imagen: "/IMG/Card_Familia_Estampado/Card_Pol_Familia_estamapado_01.webp",
+    idSeccion: "Seccion-Familia"
+  },
+  {
+    nombre: "Pijamas Personalizadas",
+    cantidad: 4,
+    precio: "125 aprox",
+    unidad: "piezas",
+    imagen: "/IMG/Card_Index/Card_03.png",
+    idSeccion: "seccion-estampados"
+  },
+  {
+    nombre: "Conjuntos Personalizados",
+    cantidad: 4,
+    precio: "330 aprox",
+    unidad: "piezas",
+    imagen: "/IMG/Card_Index/Card_04.png",
+    idSeccion: "seccion-conjuntos"
+  }
 ];
+
 
 
 const contenedor = document.getElementById("listaProductos");
