@@ -4,7 +4,7 @@ const productos = [
         cantidad: 2,
         precio:  "165  aprox",
         unidad: "piezas",
-        imagen: "IMG/Card_index/Card_01.png",
+        imagen: "IMG/CardIndex/Card_01.png",
         idSeccion: "seccion-estampados"
     },
     {
@@ -12,7 +12,7 @@ const productos = [
         cantidad: 1,
         precio:  "30  aprox",
         unidad: "pieza",
-        imagen: "IMG/Card_index/Card_02.png",
+        imagen: "IMG/CardIndex/Card_02.png",
         idSeccion: "seccion-estampados"
     },
     {
@@ -20,15 +20,16 @@ const productos = [
         cantidad: 3,
         precio: "215  aprox",
         unidad: "piezas",
-        imagen: "IMG/Card_Familia_estampado/Card_Pol_Familia_estamapado_01.webp",
+        imagen: "IMG/Card_Familia_Estampado/Card_Pol_Familia_estamapado_01.webp",
         idSeccion: "Seccion-Familia"
+        
     },
     {
         nombre: "Pijamas Personalizadas",
         cantidad: 4,
         precio:  "125  aprox",
         unidad: "piezas",
-        imagen: "IMG/Card_index/Card_03.png",
+        imagen: "IMG/CardIndex/Card_03.png",
         idSeccion: "seccion-estampados"
     },
     {
@@ -36,7 +37,7 @@ const productos = [
         cantidad: 4,
         precio:  "330 aprox",
         unidad: "piezas",
-        imagen: "IMG/Card_index/Card_04.png",
+        imagen: "IMG/Card_Idex/Card_04.png",
         idSeccion: "seccion-conjuntos"
     }
 ];
