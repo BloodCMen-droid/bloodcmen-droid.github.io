@@ -6,6 +6,13 @@ Card-Pijamas
 Card-Personajes
 Card-Familia-Bordado
 Card-Familia-Estampado
+Card-Conjunto-Bordado
+Card-Conjunto-Estampado
+Card-Polos-Estampado
+
+
+
+
 
 CAROUSEL en 
 
