@@ -26,7 +26,10 @@
 /* CARD ESTILO H&M */
 .card-hm {
   background: transparent;
-  border-radius: 0;
+  border-radius: 0;min-height: 
+  450px; /* ajusta según la card más alta */
+  display: flex;
+  flex-direction: column;
 }
 
 .card-hm .img-wrapper {
@@ -46,6 +49,12 @@
 .card-hm .card-title {
   font-size: 0.9rem;
   font-weight: 500;
+  min-height: 40px; /* ajusta según tu diseño */
+  overflow: hidden;
+}
+.card-hm .card-body p {
+  min-height: 20px; /* ejemplo para subtítulos o adicional */
+  overflow: hidden;
 }
 
 .card-hm .price {
@@ -62,6 +71,7 @@
   padding: 12px;
   border-radius: 0;
   transition: all 0.3s ease;
+   min-height: 38px;  /* ajusta si tu diseño necesita más o menos */
 }
 
 .btn-hm:hover {

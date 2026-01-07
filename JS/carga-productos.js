@@ -15,18 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // 🔹 Render de UNA sección
-  function renderSeccion(contenedorId, productos) {
-    const contenedor = document.getElementById(contenedorId);
-    if (!contenedor) return;
+function renderSeccionPorLotes(contenedorId, productos, lote = 6) {
+  const contenedor = document.getElementById(contenedorId);
+  if (!contenedor) return;
 
-    let html = "";
+  let index = 0;
 
-    productos.forEach(p => {
+  function renderLote() {
+    const html = productos.slice(index, index + lote).map(p => {
       const mensaje = encodeURIComponent(
         `¡Hola! Me interesa el modelo ${p.titulo}\n\nEnlace: ${URL_BASE_MODELO}${p.id}`
       );
-
-      html += `
+      return `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3" id="${p.id}">
           <div class="card card-hm h-100 border-0">
             <div class="img-wrapper">
@@ -52,10 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `;
-    });
+    }).join("");
 
-    contenedor.innerHTML = html;
+    contenedor.insertAdjacentHTML("beforeend", html);
+
+    index += lote;
+    if (index < productos.length) {
+      requestAnimationFrame(renderLote); // permite al navegador procesar la UI entre lotes
+    }
   }
+
+  renderLote();
+}
+
 
   // 🔹 IntersectionObserver (lazy load por contenedor)
   const observer = new IntersectionObserver(entries => {
