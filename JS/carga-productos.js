@@ -2,16 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🔹 Relación contenedor ↔ productos
   const secciones = [
-    { contenedorId: "productos-estampado", productos: productosEstampado },
-    { contenedorId: "productos-bordado", productos: productosBordado },
-    { contenedorId: "productos-personaje", productos: productosPersonaje },
-    { contenedorId: "productos-Familia-estampado", productos: productosFamiliaEstampado },
-    { contenedorId: "productos-Familia-bordado", productos: productosFamiliaBordado },
+    { contenedorId: "productos-estampado",          productos: productosEstampado },
+    { contenedorId: "productos-bordado",            productos: productosBordado },
+    { contenedorId: "productos-personaje",          productos: productosPersonaje },
+    { contenedorId: "productos-Familia-estampado",  productos: productosFamiliaEstampado },
+    { contenedorId: "productos-Familia-bordado",    productos: productosFamiliaBordado },
     { contenedorId: "productos-Conjunto-estampado", productos: productosConjuntoEstampado },
-    { contenedorId: "productos-Conjunto-bordado", productos: productosConjuntoBordado },
-    { contenedorId: "productos-Polo-estampado", productos: productosPoloEstampado },
-    { contenedorId: "productos-Polo-bordado", productos: productosPoloBordado },
-    { contenedorId: "productos-Pijamas", productos: productosPijamas }
+    { contenedorId: "productos-Conjunto-bordado",   productos: productosConjuntoBordado },
+    { contenedorId: "productos-Polo-estampado",     productos: productosPoloEstampado },
+    { contenedorId: "productos-Polo-bordado",       productos: productosPoloBordado },
+    { contenedorId: "productos-Pijamas",            productos: productosPijamas }
   ];
 
   // 🔹 Render de UNA sección
@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="img-wrapper">
               <img src="${p.imagen[0]}"
                    class="card-img-top"
+                   width="300"
+                   height="300"
                    loading="lazy"
                    decoding="async"
                    style="cursor:pointer"

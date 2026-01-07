@@ -99,7 +99,7 @@ const productosEstampado = [
   precioUnidad: "Unidad: S/. 90",
   tallas: "S, M, L | XL +5 soles",
   imagen: [ 
-    "/IMG/Card_estampado/Card_Pol_estampado_09.webp"
+    "/IMG/Card_Estampado/Card_Pol_estampado_09.webp"
   ]
 },
 {
