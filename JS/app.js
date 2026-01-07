@@ -5,7 +5,7 @@ const productos = [
     precio: "165 aprox",
     unidad: "piezas",
     imagen: "/IMG/Card_Index/Card_01.png",
-    idSeccion: "seccion-estampados"
+    idSeccion: "grupo-Poleras_Estampado"
   },
   {
     nombre: "Polos Personalizados",
@@ -13,7 +13,7 @@ const productos = [
     precio: "30 aprox",
     unidad: "pieza",
     imagen: "/IMG/Card_Index/Card_02.png",
-    idSeccion: "seccion-estampados"
+    idSeccion: "grupo-Polo-estampado"
   },
   {
     nombre: "Poleras Personalizadas Familia",
@@ -21,7 +21,7 @@ const productos = [
     precio: "215 aprox",
     unidad: "piezas",
     imagen: "/IMG/Card_Familia_Estampado/Card_Pol_Familia_estamapado_01.webp",
-    idSeccion: "Seccion-Familia"
+    idSeccion: "grupo-Familia-estampado"
   },
   {
     nombre: "Pijamas Personalizadas",
@@ -29,7 +29,7 @@ const productos = [
     precio: "125 aprox",
     unidad: "piezas",
     imagen: "/IMG/Card_Index/Card_03.png",
-    idSeccion: "seccion-estampados"
+    idSeccion: "grupo-Pijamas"
   },
   {
     nombre: "Conjuntos Personalizados",
@@ -37,7 +37,7 @@ const productos = [
     precio: "330 aprox",
     unidad: "piezas",
     imagen: "/IMG/Card_Index/Card_04.png",
-    idSeccion: "seccion-conjuntos"
+    idSeccion: "grupo-Conjuntos_Estampado"
   }
 ];
 
