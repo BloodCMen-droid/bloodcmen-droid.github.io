@@ -14,57 +14,56 @@ document.addEventListener("DOMContentLoaded", () => {
     { contenedorId: "productos-Pijamas",            productos: productosPijamas }
   ];
 
-  // 🔹 Render de UNA sección
-function renderSeccionPorLotes(contenedorId, productos, lote = 6) {
-  const contenedor = document.getElementById(contenedorId);
-  if (!contenedor) return;
+  // 🔹 Render de UNA sección por lotes (batching)
+  function renderSeccionPorLotes(contenedorId, productos, lote = 6) {
+    const contenedor = document.getElementById(contenedorId);
+    if (!contenedor) return;
 
-  let index = 0;
+    let index = 0;
 
-  function renderLote() {
-    const html = productos.slice(index, index + lote).map(p => {
-      const mensaje = encodeURIComponent(
-        `¡Hola! Me interesa el modelo ${p.titulo}\n\nEnlace: ${URL_BASE_MODELO}${p.id}`
-      );
-      return `
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3" id="${p.id}">
-          <div class="card card-hm h-100 border-0">
-            <div class="img-wrapper">
-              <img src="${p.imagen[0]}"
-                   class="card-img-top"
-                   width="300"
-                   height="300"
-                   loading="lazy"
-                   decoding="async"
-                   style="cursor:pointer"
-                   alt="${p.descripcion}"
-                   onclick='abrirModalProducto(${JSON.stringify(p)})'>
-            </div>
-            <div class="card-body d-flex flex-column px-0">
-              <h6 class="card-title mb-1">${p.titulo}</h6>
-              ${p.adicional ? `<p class="card-text small text-muted mb-2">${p.adicional}</p>` : ""}
-              <p class="price mb-0">${p.precioPareja}</p>
-              <p class="small text-muted mb-2">${p.precioUnidad}</p>
-              <p class="small mb-3">Tallas: ${p.tallas}</p>
-              <a href="${WHATSAPP_BASE}${mensaje}" target="_blank"
-                 class="btn btn-hm mt-auto w-100">Pedir</a>
+    function renderLote() {
+      const html = productos.slice(index, index + lote).map(p => {
+        const mensaje = encodeURIComponent(
+          `¡Hola! Me interesa el modelo ${p.titulo}\n\nEnlace: ${URL_BASE_MODELO}${p.id}`
+        );
+        return `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" id="${p.id}">
+            <div class="card card-hm h-100 border-0">
+              <div class="img-wrapper">
+                <img src="${p.imagen[0]}"
+                     class="card-img-top"
+                     width="300"
+                     height="300"
+                     loading="lazy"
+                     decoding="async"
+                     style="cursor:pointer"
+                     alt="${p.descripcion}"
+                     onclick='abrirModalProducto(${JSON.stringify(p)})'>
+              </div>
+              <div class="card-body d-flex flex-column px-0">
+                <h6 class="card-title mb-1">${p.titulo}</h6>
+                ${p.adicional ? `<p class="card-text small text-muted mb-2">${p.adicional}</p>` : ""}
+                <p class="price mb-0">${p.precioPareja}</p>
+                <p class="small text-muted mb-2">${p.precioUnidad}</p>
+                <p class="small mb-3">Tallas: ${p.tallas}</p>
+                <a href="${WHATSAPP_BASE}${mensaje}" target="_blank"
+                   class="btn btn-hm mt-auto w-100">Pedir</a>
+              </div>
             </div>
           </div>
-        </div>
-      `;
-    }).join("");
+        `;
+      }).join("");
 
-    contenedor.insertAdjacentHTML("beforeend", html);
+      contenedor.insertAdjacentHTML("beforeend", html);
 
-    index += lote;
-    if (index < productos.length) {
-      requestAnimationFrame(renderLote); // permite al navegador procesar la UI entre lotes
+      index += lote;
+      if (index < productos.length) {
+        requestAnimationFrame(renderLote); // deja que el navegador procese UI entre lotes
+      }
     }
+
+    renderLote();
   }
-
-  renderLote();
-}
-
 
   // 🔹 IntersectionObserver (lazy load por contenedor)
   const observer = new IntersectionObserver(entries => {
@@ -76,7 +75,8 @@ function renderSeccionPorLotes(contenedorId, productos, lote = 6) {
       );
 
       if (seccion) {
-        renderSeccion(seccion.contenedorId, seccion.productos);
+        // 🔹 Aquí cambiamos a renderSeccionPorLotes
+        renderSeccionPorLotes(seccion.contenedorId, seccion.productos);
         observer.unobserve(entry.target);
       }
     });
@@ -96,6 +96,7 @@ function renderSeccionPorLotes(contenedorId, productos, lote = 6) {
       if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 200);
   }
+
 });
 
 // 🔹 Modal
