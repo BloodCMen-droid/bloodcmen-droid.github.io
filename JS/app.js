@@ -5,7 +5,7 @@ const productos = [
     cantidad: 2,
     precio: "165 aprox",
     unidad: "piezas",
-    imagen: "/IMG/Card_Index/Card_01.webp",
+    imagen: "IMG/Card_Index/Card_01.webp",
     idSeccion: "grupo-Poleras_Estampado"
   },
   {
@@ -14,7 +14,7 @@ const productos = [
     cantidad: 1,
     precio: "30 aprox",
     unidad: "pieza",
-    imagen: "/IMG/Card_Index/Card_02.webp",
+    imagen: "IMG/Card_Index/Card_02.webp",
     idSeccion: "grupo-Polo-estampado"
   },
   {
@@ -23,7 +23,7 @@ const productos = [
     cantidad: 3,
     precio: "215 aprox",
     unidad: "piezas",
-    imagen: "/IMG/Card_Familia_Estampado/Card_Pol_Familia_estamapado_01.webp",
+    imagen: "IMG/Card_Familia_Estampado/Card_Pol_Familia_estamapado_01.webp",
     idSeccion: "grupo-Familia-estampado"
   },
   {
@@ -32,7 +32,7 @@ const productos = [
     cantidad: 4,
     precio: "125 aprox",
     unidad: "piezas",
-    imagen: "/IMG/Card_Index/Card_03.webp",
+    imagen: "IMG/Card_Index/Card_03.webp",
     idSeccion: "grupo-Pijamas"
   },
   {
@@ -41,7 +41,7 @@ const productos = [
     cantidad: 4,
     precio: "330 aprox",
     unidad: "piezas",
-    imagen: "/IMG/Card_Index/Card_04.webp",
+    imagen: "IMG/Card_Index/Card_04.webp",
     idSeccion: "grupo-Conjuntos_Estampado"
   }
 ];
