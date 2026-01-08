@@ -137,3 +137,23 @@ body {
   background: #000;
   color: #fff;
 }
+/* ===============================
+   PREVENCIÓN DE CLS – SECCIONES
+   =============================== */
+
+.seccion-productos {
+  min-height: 600px;          /* reserva espacio antes del render */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  contain: layout paint;     /* aisla el layout (reduce CLS e INP) */
+}
+
+/* Desktop: más cards visibles */
+@media (min-width: 992px) {
+  .seccion-productos {
+    min-height: 900px;
+  }
+}
+
+
+

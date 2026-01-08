@@ -80,3 +80,4 @@ if (contenedor) {
 } else {
     console.warn("No se encontró el contenedor #listaProductos, código ignorad");
 }
+
