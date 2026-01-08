@@ -1,103 +1,31 @@
-
-
-
-        body { background-color: #f8f9fa; padding-top: 40px; padding-bottom: 60px; }
-        .section-title { text-align: center; margin: 60px 0 40px; font-size: 2.5rem; color: #e91e63; }
-        .card { 
-            transition: transform 0.3s; 
-            height: 100%; 
-            border: none; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .card:hover { transform: translateY(-10px); }
-        .card-img-top { height: 400px; object-fit: cover; background-color: #eee; }
-        .price { font-size: 1.8rem; font-weight: bold; color: #e91e63; }
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-            font-weight: bold;
-        }
-        .btn-whatsapp:hover { background-color: #128C7E; color: white; }
-
-
-
-
-
-/* CARD ESTILO H&M */
-.card-hm {
-  background: transparent;
-  border-radius: 0;min-height: 
-  450px; /* ajusta según la card más alta */
-  display: flex;
-  flex-direction: column;
-}
-
-.card-hm .img-wrapper {
-  overflow: hidden;
-}
-
-.card-hm img {
-  border-radius: 0;
-  transition: transform 0.4s ease;
-}
-
-.card-hm:hover img {
-  transform: scale(1.05);
-}
-
-/* TEXTO */
-.card-hm .card-title {
-  font-size: 0.9rem;
-  font-weight: 500;
-  min-height: 40px; /* ajusta según tu diseño */
-  overflow: hidden;
-}
-.card-hm .card-body p {
-  min-height: 20px; /* ejemplo para subtítulos o adicional */
-  overflow: hidden;
-}
-
-.card-hm .price {
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-/* BOTÓN MINIMAL */
-.btn-hm {
-  border: 1px solid #000;
-  background: transparent;
-  color: #000;
-  font-size: 0.85rem;
-  padding: 12px;
-  border-radius: 0;
-  transition: all 0.3s ease;
-   min-height: 38px;  /* ajusta si tu diseño necesita más o menos */
-}
-
-.btn-hm:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* TITULO */
+/* =========================
+   BASE
+========================= */
 body {
+  background-color: #f8f9fa;
+  padding-top: 40px;
+  padding-bottom: 60px;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-/* TÍTULO */
+/* =========================
+   TITULOS (evita CLS)
+========================= */
 .titulo-principal {
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.25em;
   margin-bottom: 10px;
+  min-height: 3.5rem;
 }
 
-/* SUBTÍTULO */
 .subtitulo {
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 60px;
+  min-height: 1.2rem;
 }
+
 .titulo-principal::after {
   content: "";
   display: block;
@@ -106,12 +34,46 @@ body {
   background: #000;
   margin: 15px auto 0;
 }
-/*Mejora para carga creo XD*/
+
+/* =========================
+   SECCIONES
+========================= */
+.seccion-productos {
+  margin-bottom: 80px;
+}
+
+.titulo-seccion {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  min-height: 1.6rem;
+}
+
+/* =========================
+   CARD H&M (CLS SAFE)
+========================= */
+.card-hm {
+  background: transparent;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none;
+}
+
+/* Neutraliza Bootstrap */
+.card-hm.card {
+  box-shadow: none;
+}
+
+/* =========================
+   IMAGEN (CLAVE CLS)
+========================= */
 .img-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1; /* 800x800 visual */
+  aspect-ratio: 1 / 1;   /* espacio reservado */
   overflow: hidden;
-  background: #f5f5f5; /* placeholder elegante */
+  background: #f5f5f5;
 }
 
 .img-wrapper img {
@@ -119,4 +81,59 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover seguro (no CLS) */
+.card-hm:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   CUERPO CARD
+========================= */
+.card-hm .card-body {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* TITULO PRODUCTO */
+.card-hm .card-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-height: 2.2rem;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+/* TEXTOS */
+.card-hm p {
+  margin-bottom: 4px;
+}
+
+.card-hm .price {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+.btn-hm {
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  font-size: 0.85rem;
+  padding: 12px;
+  border-radius: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 38px;
+}
+
+.btn-hm:hover {
+  background: #000;
+  color: #fff;
 }
