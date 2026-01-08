@@ -148,12 +148,32 @@ body {
   contain: layout paint;     /* aisla el layout (reduce CLS e INP) */
 }
 
-/* Desktop: más cards visibles */
-@media (min-width: 992px) {
+/* Desktop grande */
+@media (min-width: 1200px) {
   .seccion-productos {
     min-height: 900px;
   }
 }
 
+/* Tablet */
+@media (max-width: 991.98px) {
+  .seccion-productos {
+    min-height: 800px;
+  }
+}
 
+/* Mobile */
+@media (max-width: 575.98px) {
+  .seccion-productos {
+    min-height: 1100px;
+  }
+}
+
+
+
+
+.seccion-productos {
+  content-visibility: auto;
+  contain-intrinsic-size: 1100px;
+}
 
